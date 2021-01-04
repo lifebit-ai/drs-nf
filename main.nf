@@ -28,8 +28,8 @@ Channel
     .set { ch_gtex_gen3_ids }
 
 Channel
-    .fromPath(key_file)
-    .ifEmpty { exit 1, "Key file not found: ${key_file}" }
+    .fromPath(params.key_file)
+    .ifEmpty { exit 1, "Key file not found: ${params.key_file}" }
     .set { ch_key_file }
 
 Channel
